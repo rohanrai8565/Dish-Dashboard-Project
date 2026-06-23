@@ -1,0 +1,38 @@
+.container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 13px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 6px 28px rgba(0,0,0,.55);
+  animation: slideIn .22s cubic-bezier(.22,1,.36,1);
+  max-width: 320px;
+  pointer-events: all;
+  border: 1px solid transparent;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(40px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+.success  { background: var(--surface2); border-color: var(--green);  color: var(--text); }
+.realtime { background: var(--surface2); border-color: var(--accent); color: var(--text); }
+.error    { background: var(--surface2); border-color: var(--red);    color: var(--text); }
+
+.icon { font-size: 14px; flex-shrink: 0; }
+.msg  { line-height: 1.4; }

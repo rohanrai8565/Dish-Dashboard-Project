@@ -1,0 +1,49 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:          #0c0c0e;
+  --surface:     #141418;
+  --surface2:    #1e1e24;
+  --surface3:    #27272f;
+  --border:      #2a2a34;
+  --border2:     #38383f;
+
+  --accent:      #f97316;   /* warm orange — food energy */
+  --accent-hover:#ea6a07;
+  --accent-dim:  rgba(249,115,22,.12);
+  --green:       #22c55e;
+  --green-dim:   rgba(34,197,94,.15);
+  --red:         #ef4444;
+  --amber:       #f59e0b;
+
+  --text:        #f2ede8;
+  --text2:       #a8a8b8;
+  --text3:       #5e5e70;
+
+  --font-display:'Playfair Display', Georgia, serif;
+  --font-body:   'Inter', system-ui, sans-serif;
+
+  --r-sm:  8px;
+  --r-md:  14px;
+  --r-lg:  20px;
+  --r-xl:  26px;
+
+  --shadow: 0 8px 32px rgba(0,0,0,.45);
+}
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button { font-family: var(--font-body); }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 4px; }
